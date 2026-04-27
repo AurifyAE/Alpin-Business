@@ -7,7 +7,7 @@ const assetBase = import.meta.env.BASE_URL;
 
 pdfjs.GlobalWorkerOptions.workerSrc = `${assetBase}pdf.worker.min.mjs`;
 
-const pdfFile = `/public/document/alpin.pdf`;
+const pdfFile = `/document/alpin.pdf`;
 const zoomLevels = [0.9, 1, 1.1, 1.25, 1.4, 1.6];
 
 export default function App() {
