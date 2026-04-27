@@ -3,9 +3,11 @@ import { Document, Page, pdfjs } from 'react-pdf'
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
 
-pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs'
+const assetBase = import.meta.env.BASE_URL
 
-const pdfFile = '/public/document/alpin.pdf'
+pdfjs.GlobalWorkerOptions.workerSrc = `${assetBase}pdf.worker.min.mjs`
+
+const pdfFile = `${assetBase}document/alpin.pdf`
 const zoomLevels = [0.9, 1, 1.1, 1.25, 1.4, 1.6]
 
 export default function App() {
