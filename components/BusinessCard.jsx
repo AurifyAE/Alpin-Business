@@ -20,7 +20,25 @@ export const users = [
     website: "www.alpinmarkets.com",
     address: "Empire Heights Tower B, Business Bay, Dubai, UAE.",
   },
-   
+  {
+    firstName: "ASHIM RAJUMON",
+    lastName: "RAWUTHER",
+    role: "Operations Manager",
+    phone: "+971 56 273 2251",
+    email: "ashim@alpinmarkets.com",
+    website: "www.alpinmarkets.com",
+    address: "Empire Heights Tower B, Business Bay, Dubai, UAE.",
+  },
+
+  {
+    firstName: "ATUL",
+    lastName: "MADAAN",
+    role: "Chief Dealing Officer",
+    phone: "+971 52 307 6233",
+    email: "a.madaan@alpinmarkets.com",
+    website: "www.alpinmarkets.com",
+    address: "Empire Heights Tower B, Business Bay, Dubai, UAE.",
+  },
 ];
 
 // ─── Icons ─────────────────────────────────────────────────────────────────

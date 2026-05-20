@@ -8,13 +8,14 @@ import {
 import BusinessCard, { users } from "../components/BusinessCard";
 
 // ─── Arrow icon ────────────────────────────────────────────────────────────
-const ArrowIcon = () => (
+const ArrowIcon = ({ className = "" }) => (
   <svg
+    className={className}
     width="14"
     height="14"
     viewBox="0 0 24 24"
     fill="none"
-    stroke="rgba(45,158,207,0.7)"
+    stroke="currentColor"
     strokeWidth="2.5"
     strokeLinecap="round"
     strokeLinejoin="round"
@@ -32,7 +33,9 @@ function CardWrapper() {
     return (
       <div className="flex min-h-screen items-center justify-center bg-[#f7fafc] px-4">
         <div className="rounded-[28px] border border-[#e5edf3] bg-white px-8 py-10 text-center shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
-          <p className="mb-6 text-lg font-medium text-slate-600">Card not found.</p>
+          <p className="mb-6 text-lg font-medium text-slate-600">
+            Card not found.
+          </p>
           <Link
             to="/"
             className="inline-flex rounded-full border border-[#d6e8f2] px-5 py-2.5 text-sm font-semibold text-[#2d9ecf] transition hover:border-[#2d9ecf] hover:bg-[#f1faff]"
@@ -72,7 +75,7 @@ function Directory() {
     <div className="min-h-screen bg-[#f6fafc] px-4 py-8 sm:px-6 sm:py-10">
       <div className="mx-auto flex w-full max-w-[1080px] flex-col gap-8">
         <div className="overflow-hidden rounded-[28px] border border-[#e3edf3] bg-white shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
-          <div className="relative flex flex-col gap-5 bg-[#0d2a45] px-5 py-6 sm:px-8 sm:py-7">
+          <div className="relative flex flex-col gap-5 bg-[#0d2a45] overflow-hidden px-5 py-6 sm:px-8 sm:py-7">
             <div className="absolute -right-8 -top-8 h-[140px] w-[140px] rounded-full border-[28px] border-[rgba(45,158,207,0.14)]" />
             <div className="absolute right-[56px] -bottom-10 h-[100px] w-[100px] rounded-full border-[20px] border-[rgba(45,158,207,0.08)]" />
 
@@ -82,10 +85,12 @@ function Directory() {
                   Team Directory
                 </p>
                 <h1 className="mt-3 max-w-[12ch] text-3xl font-bold leading-tight text-white sm:text-4xl">
-                  Meet the <span className="text-[#2d9ecf]">Alpin</span> sales team
+                  Meet the <span className="text-[#2d9ecf]">Alpin</span> sales
+                  team
                 </h1>
                 <p className="mt-3 max-w-[56ch] text-sm leading-6 text-white/65 sm:text-[15px]">
-                  Select any profile to open a responsive digital business card with working contact and website links.
+                  Select any profile to open a responsive digital business card
+                  with working contact and website links.
                 </p>
               </div>
 
@@ -93,7 +98,9 @@ function Directory() {
                 <p className="text-[11px] uppercase tracking-[0.22em] text-white/45">
                   Members
                 </p>
-                <p className="mt-2 text-3xl font-bold text-white">{users.length}</p>
+                <p className="mt-2 text-3xl font-bold text-white">
+                  {users.length}
+                </p>
               </div>
             </div>
           </div>
@@ -117,50 +124,54 @@ function Directory() {
 
             <div className="bg-white px-4 py-5 sm:px-6 sm:py-6">
               <div className="grid gap-4">
-            {users.map((user, index) => {
-              const initials = user.firstName[0] + (user.lastName[0] || "");
+                {users.map((user, index) => {
+                  const initials = user.firstName[0] + (user.lastName[0] || "");
 
-              return (
-                <Link
-                  key={index}
-                  to={`/card/${index}`}
-                  className="
+                  return (
+                    <Link
+                      key={index}
+                      to={`/card/${index}`}
+                      className="
                     group overflow-hidden rounded-[22px] border border-[#e7eef3]
                     bg-[#fcfeff] transition hover:border-[#cfe3ee] hover:shadow-[0_14px_34px_rgba(15,23,42,0.08)]
                   "
-                >
-                  <div className="flex items-center gap-4 bg-[#0d2a45] px-4 py-4 sm:px-5">
-                    <div className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-full bg-[rgba(45,158,207,0.18)] border border-[rgba(45,158,207,0.35)] text-sm font-bold text-white">
-                      {initials}
-                    </div>
-                    <div className="min-w-0">
-                      <p className="truncate text-[17px] font-bold leading-tight text-white">
-                        {user.firstName}{" "}
-                        <span className="text-[#2d9ecf]">{user.lastName}</span>
-                      </p>
-                      <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.18em] text-white/55">
-                        {user.role}
-                      </p>
-                    </div>
-                  </div>
+                    >
+                      <div className="flex items-center gap-4 bg-[#0d2a45] px-4 py-4 sm:px-5">
+                        <div className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-full bg-[rgba(45,158,207,0.18)] border border-[rgba(45,158,207,0.35)] text-sm font-bold text-white">
+                          {initials}
+                        </div>
+                        <div className="min-w-0">
+                          <p className="truncate text-[17px] font-bold leading-tight text-white">
+                            {user.firstName}{" "}
+                            <span className="text-[#2d9ecf]">
+                              {user.lastName}
+                            </span>
+                          </p>
+                          <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.18em] text-white/55">
+                            {user.role}
+                          </p>
+                        </div>
+                      </div>
 
-                  <div className="h-[2px] bg-gradient-to-r from-[#2d9ecf] to-[rgba(45,158,207,0.14)]" />
+                      <div className="h-[2px] bg-gradient-to-r from-[#2d9ecf] to-[rgba(45,158,207,0.14)]" />
 
-                  <div className="flex flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
-                    <div className="min-w-0">
-                      <p className="truncate text-sm font-medium text-[#1e3a52]">
-                        {user.email}
-                      </p>
-                      <p className="mt-1 text-sm text-slate-500">{user.phone}</p>
-                    </div>
+                      <div className="flex flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
+                        <div className="min-w-0">
+                          <p className="truncate text-sm font-medium text-[#1e3a52]">
+                            {user.email}
+                          </p>
+                          <p className="mt-1 text-sm text-slate-500">
+                            {user.phone}
+                          </p>
+                        </div>
 
-                    <div className="inline-flex w-fit items-center gap-2 rounded-full bg-[#eef8fc] px-3 py-2 text-sm font-semibold text-[#2d9ecf] transition group-hover:bg-[#2d9ecf] group-hover:text-white">
-                      View card <ArrowIcon />
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
+                        <div className="inline-flex w-fit items-center gap-2 rounded-full bg-[#eef8fc] px-3 py-2 text-sm font-semibold text-[#2d9ecf] transition group-hover:bg-[#2d9ecf] group-hover:text-white">
+                          View card <ArrowIcon />
+                        </div>
+                      </div>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
