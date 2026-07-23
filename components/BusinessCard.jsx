@@ -3,6 +3,8 @@ import React from "react";
 // ─── Data ──────────────────────────────────────────────────────────────────
 export const users = [
   {
+    id: "0",
+    slug: "huzaifa",
     firstName: "HUZAIFA",
     lastName: "NASIR",
     role: "Sales Manager",
@@ -12,6 +14,8 @@ export const users = [
     address: "Empire Heights Tower B, Business Bay, Dubai, UAE.",
   },
   {
+    id: "1",
+    slug: "raja",
     firstName: "RAJA SHAHAB",
     lastName: "NADEEM",
     role: "Sales Director",
@@ -21,6 +25,8 @@ export const users = [
     address: "Empire Heights Tower B, Business Bay, Dubai, UAE.",
   },
   {
+    id: "2",
+    slug: "ashim",
     firstName: "ASHIM RAJUMON",
     lastName: "RAWUTHER",
     role: "Operations Manager",
@@ -31,6 +37,8 @@ export const users = [
   },
 
   {
+    id: "3",
+    slug: "atul",
     firstName: "ATUL",
     lastName: "MADAAN",
     role: "Chief Dealing Officer",
@@ -40,6 +48,7 @@ export const users = [
     address: "Empire Heights Tower B, Business Bay, Dubai, UAE.",
   },
 ];
+
 
 // ─── Icons ─────────────────────────────────────────────────────────────────
 const PersonIcon = () => (

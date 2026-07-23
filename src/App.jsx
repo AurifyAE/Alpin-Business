@@ -27,7 +27,12 @@ const ArrowIcon = ({ className = "" }) => (
 // ─── Card viewer ───────────────────────────────────────────────────────────
 function CardWrapper() {
   const { id } = useParams();
-  const user = users[parseInt(id, 10)];
+  const user = users.find(
+    (u) =>
+      u.id === id ||
+      u.slug?.toLowerCase() === id?.toLowerCase() ||
+      users.indexOf(u) === parseInt(id, 10)
+  );
 
   if (!user) {
     return (
@@ -130,7 +135,7 @@ function Directory() {
                   return (
                     <Link
                       key={index}
-                      to={`/card/${index}`}
+                      to={`/card/${user.slug || user.id}`}
                       className="
                     group overflow-hidden rounded-[22px] border border-[#e7eef3]
                     bg-[#fcfeff] transition hover:border-[#cfe3ee] hover:shadow-[0_14px_34px_rgba(15,23,42,0.08)]
