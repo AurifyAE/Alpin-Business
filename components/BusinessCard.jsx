@@ -4,7 +4,7 @@ import React from "react";
 export const users = [
   {
     id: "0",
-    slug: "huzaifa",
+    slug: "huzaifa-nasir",
     firstName: "HUZAIFA",
     lastName: "NASIR",
     role: "Sales Manager",
@@ -15,7 +15,7 @@ export const users = [
   },
   {
     id: "1",
-    slug: "raja",
+    slug: "raja-shahab",
     firstName: "RAJA SHAHAB",
     lastName: "NADEEM",
     role: "Sales Director",
@@ -26,7 +26,7 @@ export const users = [
   },
   {
     id: "2",
-    slug: "ashim",
+    slug: "ashim-rajumon",
     firstName: "ASHIM RAJUMON",
     lastName: "RAWUTHER",
     role: "Operations Manager",
@@ -38,7 +38,7 @@ export const users = [
 
   {
     id: "3",
-    slug: "atul",
+    slug: "atul-madaan",
     firstName: "ATUL",
     lastName: "MADAAN",
     role: "Chief Dealing Officer",
