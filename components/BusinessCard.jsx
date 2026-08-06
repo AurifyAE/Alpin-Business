@@ -9,7 +9,7 @@ export const users = [
     lastName: "NASIR",
     role: "Sales Manager",
     phone: "+971 56 470 3647",
-    email: "huzaifa@alpinmarkets.com",
+    email: "huzaifa.n@alpinmarkets.com",
     website: "www.alpinmarkets.com",
     address: "Empire Heights Tower B 904, Business Bay Dubai",
   },
