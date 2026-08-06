@@ -11,7 +11,7 @@ export const users = [
     phone: "+971 56 470 3647",
     email: "huzaifa@alpinmarkets.com",
     website: "www.alpinmarkets.com",
-    address: "Empire Heights Tower B, Business Bay, Dubai, UAE.",
+    address: "Empire Heights Tower B 904, Business Bay Dubai",
   },
   {
     id: "1",
@@ -22,7 +22,7 @@ export const users = [
     phone: "+971 56 847 1634",
     email: "s.raja@alpinmarkets.com",
     website: "www.alpinmarkets.com",
-    address: "Empire Heights Tower B, Business Bay, Dubai, UAE.",
+    address: "Empire Heights Tower B 904, Business Bay Dubai",
   },
   {
     id: "2",
@@ -33,7 +33,7 @@ export const users = [
     phone: "+971 56 273 2251",
     email: "ashim@alpinmarkets.com",
     website: "www.alpinmarkets.com",
-    address: "Empire Heights Tower B, Business Bay, Dubai, UAE.",
+    address: "Empire Heights Tower B 904, Business Bay Dubai",
   },
 
   {
@@ -45,7 +45,7 @@ export const users = [
     phone: "+971 52 307 6233",
     email: "a.madaan@alpinmarkets.com",
     website: "www.alpinmarkets.com",
-    address: "Empire Heights Tower B, Business Bay, Dubai, UAE.",
+    address: "Empire Heights Tower B 904, Business Bay Dubai",
   },
 ];
 
